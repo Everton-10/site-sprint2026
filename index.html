@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Sprint MTB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<!-- script java script chamando a pagina js -->
+
+<script src="js/script.js" defer></script>
+
+
+
+<!-- script contagem do evento sprint mtb -->
+ <script>
+const eventDate = new Date("2026-10-18T08:00:00").getTime();
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+
+  if (distance < 0) return;
+
+  document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+  document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+}, 1000);
+</script>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#" class="logo">
+      <img src="img/logo sprint.png" alt="Sprint MTB">
+    </a>
+
+    <div class="countdown">
+  <div><span id="days">00</span><small>Dias</small></div>
+  <div><span id="hours">00</span><small>Horas</small></div>
+  <div><span id="minutes">00</span><small>Min</small></div>
+  <div><span id="seconds">00</span><small>Seg</small></div>
+</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#evento">Evento</a></li>
+      <li><a href="#edicoes">Edições</a></li>
+      <li><a href="#regulamento">Regulamento</a></li>
+      <li><a href="#inscricao" class="btn">Inscreva-se</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="banner">
+  <div class="banner-content">
+    <h1>SPRINT MTB 2026</h1>
+    <p>Adrenalina, velocidade e superação nas trilhas.</p>
+    <a href="#inscricao" class="btn">Quero competir</a>
+  </div>
+</section>
+
+
+<!-- linha comentada inutlizada
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Sprint MTB</h1>
+    <p>Domine as montanhas conecte-se a natureza.</p>
+    <a href="#inscricao" class="btn">Quero competir</a>
+  </div>
+</section>
+ -->
+
+<section id="evento">
+  <h2>O Evento</h2>
+  <p>Uma competição de mountain bike com adrenalina, velocidade e superação.</p>
+  <div class="cards">
+    <!-- <div class="card">📍 Local</div> -->
+     <a class="card link-map"
+   href="https://www.google.com/maps?q=Parque+da+Cidade+Socorro+SP"
+   target="_blank">
+   📍 Local Parque da Cidade – Socorro/SP
+</a>
+<!-- tooltip passa o mouse aparece a data -->
+ 
+    <div class="card tooltip">
+      📅 Data
+      <span class="tooltip-text">17 / 18 de Outubro de 2026</span>
+    </div>
+
+    <a href="categorias.html" class="card">🏁 Categorias</a>
+
+    <div class="card">🏆 Premiação</div>
+  </div>
+</section>
+
+<section id="edicoes">
+  <h2>Edições Anteriores</h2>
+  <div class="cards">
+    <div class="card">Sprint MTB 2024</div>
+    <div class="card">Sprint MTB 2025</div>
+    <div class="card">Sprint MTB 2026</div>
+  </div>
+</section>
+
+<!-- kids  -->
+
+
+<section id="kids" class="kids-section">
+  <h2>Corrida Kids Sprint MTB</h2>
+  <p class="kids-text">
+    A Corrida Kids é um momento especial do Sprint MTB, pensada para incentivar
+    o esporte desde cedo, promover a diversão, o espírito esportivo e criar
+    memórias inesquecíveis para as crianças e suas famílias.
+  </p>
+
+  <p class="kids-text">
+    Em 2025 tivemos dezenas de pequenos atletas participando, com muita alegria,
+    medalhas, brindes e um percurso totalmente seguro e adaptado para cada idade.
+  </p>
+
+  <h3>Confira como foi em 2025 👇</h3>
+
+  <div class="kids-carousel">
+    <div class="kids-track">
+      <img src="img/kids1.jpg" alt="Corrida Kids 2025">
+      <img src="img/kids2.jpg" alt="Corrida Kids 2025">
+      <img src="img/kids3.jpg" alt="Corrida Kids 2025">
+      <img src="img/kids4.jpg" alt="Corrida Kids 2025">
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="regulamento">
+  <h2>Regulamento</h2>
+  <p>Inscrições, categorias, segurança e regras gerais.</p>
+  <a href="#" class="btn">Ver regulamento completo</a>
+</section>
+
+<section id="inscricao">
+  <h2>Garanta sua vaga</h2>
+
+  <div class="inscricao-container">
+
+    <form class="form">
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="E-mail" required>
+      <button class="btn">Quero competir</button>
+    </form>
+
+    <div class="whatsapp-box">
+      <img src="img/whatsapp.png" alt="WhatsApp">
+      <a 
+        href="https://wa.me/5511999999999" 
+        target="_blank" 
+        class="btn-whats">
+        Fale conosco no WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+</section>
+
+<section id="patrocinadores">
+  <h2>Patrocinadores Sprint MTB 2026</h2>
+
+  <div class="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="sponsor"><img src="img/patrocinio1.jpeg"></div>
+      <div class="sponsor"><img src="img/patrocinio2.jpeg"></div>
+      <div class="sponsor"><img src="img/patrocinio3.jpg"></div>
+      <div class="sponsor"><img src="img/patrocinio4.jpeg"></div>
+      <div class="sponsor"><img src="img/patrocinio5.jpeg"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© Sprint MTB - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
