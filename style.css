@@ -184,7 +184,7 @@ body {
 
 /* SEÇÕES */
 section {
-  padding: 100px 20px;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: auto;
 }
@@ -356,8 +356,11 @@ section h2 {
 
 
 /* carrossel patrocinadores */
+
+
 #patrocinadores {
   text-align: center;
+ 
 }
 
 .carousel {
@@ -365,26 +368,43 @@ section h2 {
   overflow: hidden;
   position: relative;
 }
-
+/* faixa que se move */
 .carousel-track {
   display: flex;
   gap: 60px;
-  transition: transform 1s ease;
-}
+  align-items: center;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+  flex-wrap: nowrap;
 
+}
+/* logos  */
 .sponsor {
+  flex: 0 0 auto;
   min-width: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
+/* imagem */
 .sponsor img {
   max-width: 180px;
   max-height: 90px;
   filter: grayscale(100%);
   opacity: 0.8;
   transition: 0.3s;
+border: 2px solid #00ff88;   /* verde do site */
+  border-radius: 12px;
+  padding: 10px;
+  animation: glow 2s infinite alternate;
+
+
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
 }
 
 .sponsor img:hover {
@@ -392,10 +412,25 @@ section h2 {
   opacity: 1;
   transform: scale(1.05);
 }
-.carousel-track {
-  display: flex !important;
-  flex-direction: row;
-  align-items: center;
+
+/* Animação do carrossel */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Borda piscando neon */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #00ff88;
+  }
+  to {
+    box-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88;
+  }
 }
 
 
@@ -404,94 +439,9 @@ section h2 {
 
 
 
-/* ===== CATEGORIAS PAGE ===== */
-
-.header-interno {
-  height: 40vh;
-  background: linear-gradient(180deg, #000, #0a0a0a);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header-interno h1 {
-  font-size: 48px;
-  color: #5fed00;
-}
-
-.categorias-page {
-  padding: 80px 8%;
-}
-
-.cat-title {
-  margin-top: 60px;
-  margin-bottom: 20px;
-  font-size: 32px;
-  color: #5fed00;
-  border-left: 6px solid #00ff88;
-  padding-left: 15px;
-}
-
-.tabela-categorias {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 40px;
-  background: #0b0b0b;
-}
-
-.tabela-categorias th {
-  background: #5fed00;
-  color: #000;
-  padding: 14px;
-  text-align: center;
-}
-
-.tabela-categorias td {
-  padding: 14px;
-  text-align: center;
-  border-bottom: 1px solid #222;
-}
-
-.tabela-categorias tr:hover {
-  background: #111;
-  transition: 0.3s;
-}
-
-/* botão home pagina categorias */
-
-.btn-voltar {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background: #5fed00;
-  color: #000;
-  padding: 12px 18px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  z-index: 99999;
-}
+/* ===== CATEGORIAS PAGE ===== 
 
 
-/* pesquisa pag categorias */
-
-.search-box {
-  max-width: 400px;
-  margin: 60px auto;
-  padding: 10px;
-  position: relative;
-  z-index: 20;
-}
-
-#searchInput {
-  width: 100%;
-  padding: 14px 20px;
-  border-radius: 30px;
-  border: none;
-  font-size: 16px;
-  background: #ffffff;
-  color: #000000;
-}
 
 
 /* ===== CORRIDA KIDS ===== */
@@ -856,3 +806,21 @@ section h2 {
   border-radius: 20px;
   box-shadow: 0 0 40px rgba(0,255,85,0.4);
 }
+
+
+/* teste alinhamento quando precisar 
+section { outline: 2px solid red; }
+footer { outline: 2px solid blue; }
+* {
+  outline: 1px solid red;
+} 
+*/
+
+/* teste carrosel 
+.sponsor {
+  outline: 2px solid red;
+}
+.carousel-track {
+  outline: 2px solid blue;
+}
+*/

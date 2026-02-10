@@ -1,0 +1,116 @@
+/* ===== CATEGORIAS PAGE ===== */
+
+.header-interno {
+  height: 10vh;
+  background: linear-gradient(180deg, #000, #0a0a0a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-interno h1 {
+  font-size: 48px;
+  color: #5fed00;
+}
+
+.categorias-page {
+  padding: 40px 3%;
+}
+
+.cat-title {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #5fed00;
+  border-left: 6px solid #00ff88;
+  padding-left: 15px;
+}
+
+.tabela-categorias {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  background: #0b0b0b;
+  margin: 40px auto;
+  font-size: 16px;
+  border-radius: 12px;
+   overflow: hidden;
+    box-shadow: 0 0 30px rgba(5, 163, 89, 0.589);
+}
+
+.tabela-categorias th {
+  background: #5fed00;
+  color: #000;
+  padding: 12px;
+  text-align: center;
+}
+
+.tabela-categorias td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+
+.tabela-categorias tr:hover {
+  background: #111;
+  transition: 0.3s;
+}
+
+/* botão home pagina categorias */
+
+.btn-voltar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #5fed00;
+  color: #000;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 99999;
+}
+
+
+/* pesquisa pag categorias */
+
+.search-box {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 10px;
+  position: relative;
+  z-index: 20;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 14px 120px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* responsividade mobile */
+@media (max-width: 768px) {
+  .header-interno h1 {
+    font-size: 28px;
+  }
+
+  .cat-title {
+    font-size: 24px;
+  }
+
+  .tabela-categorias {
+    font-size: 14px;
+  }
+
+  #searchInput {
+    padding: 12px 100px;
+    font-size: 14px;
+  }
+}
+
+
