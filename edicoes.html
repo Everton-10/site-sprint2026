@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edições Sprint MTB </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="footer.css">
 <link rel="stylesheet" href="edicoes.css">
@@ -43,29 +44,37 @@
   </div>
 
   <!-- EDIÇÃO 2024 -->
-  <div class="edicao" id="edicao-2024">
+    <section class="edicao" id="edicao-2024">
     <h2>🏆 Campeões Sprint MTB 2024</h2>
 
-    <div class="grid-campeoes">
-      <div class="card-campeao">
-        <img src="img/campeoes/2024-pro.jpg">
-        <h3>PRO Masculino</h3>
-        <p>João Silva</p>
-      </div>
+    <div class="grid-campeao">
+
+       <div class="card-campeao">
+         <div class="campeao-img">
+         <img src="img/campeoes/diego.jpg" >   
+         </div>
+          <h3>PRO Masculino</h3>
+        <p>Diego Almeida</p>
+        </div>
+      
+    
 
       <div class="card-campeao">
-        <img src="img/campeoes/2024-fem.jpg">
+        <div class="campeao-img">
+           <img src="img/campeoes/gabriela2024.jpeg">
+        </div>
         <h3>PRO Feminino</h3>
-        <p>Maria Santos</p>
+        <p>Gabriela  de Moraes</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- EDIÇÃO 2025 -->
-  <div class="edicao" id="edicao-2025" style="display:none">
+   <section class="edicao" id="edicao-2025" style="display:none">
   <h2>🏆 Campeões Sprint MTB 2025</h2>
 
-  <div class="grid-campeoes">
+  <div class="grid-campeao">
     <div class="card-campeao">
       <div class="campeao-img">
         <img src="/img/campeoes/Matheus.JPG">
@@ -79,19 +88,50 @@
         <img src="/img/campeoes/Maria.JPG">
       </div>
       <h3>PRO Feminino</h3>
-      <p>Maria Leticia Marino</p>
+      <p>Maria Leticia Mariano</p>
     </div>
   </div>
 </div>
 
 
-  <!-- EDIÇÃO 2026 -->
-  <div class="edicao" id="edicao-2026" style="display:none">
-    <h2>🏆 Campeões Sprint MTB 2026</h2>
-    ...
+<!-- categoria sport 2025 -->
+
+    <h3 class="subtitulo">Categoria SPORT</h3>
+
+    <div class="grid-campeao">
+      
+       <div class="card-campeao">
+        <div class="campeao-img">
+        <img src="/img/campeoes/IMG_2255.JPG">
+        </div>
+            <h3>Campeão SPORT</h3>
+            <p>Matheus Tafulla</p>
+        </div>
+
+    <div class="card-campeao">
+      <div class="campeao-img">
+        <img src="/img/campeoes/Erivanisport2025.jpeg">
+      </div>
+      <h3>Campeão SPORT</h3>
+      <p>Erivani Testoni</p>
+    </div>
   </div>
+</section>
+
+
+
+   </section>
+
+  <!-- EDIÇÃO 2026 -->
+        <section class="edicao" id="edicao-2026" style="display:none">
+          
+        <h2>🏆 Campeões Sprint MTB 2026</h2>
+    ...   </div>
+        </section>
 
 </section>
+
+<!-- script display -->
 
 <script>
 function showEdition(year) {
@@ -102,6 +142,9 @@ function showEdition(year) {
     .style.display = 'block';
 }
 </script>
+
+<!-- rodapé -->
+
 <footer>
   <div class="footer-container">
 
@@ -135,5 +178,12 @@ function showEdition(year) {
   <p>Desenvolvido por: Everton Casagrande</p>
 </footer>
 </main>
+
+<!-- zap fixo -->
+<a href="https://wa.me/5599999999999?text=Olá!%20Quero%20me%20inscrever%20no%20Sprint%20MTB%202026!"
+   class="whatsapp-fixo"
+   target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 </body>
 </html>

@@ -27,3 +27,10 @@ input.addEventListener("keyup", function () {
     linha.style.display = texto.includes(filtro) ? "" : "none";
   });
 });
+// funcao zap fixo//
+function enviarWhats() {
+  let nome = document.getElementById("nome").value;
+  let msg = `Olá! Meu nome é ${nome} e quero competir na Sprint MTB`;
+  let url = `https://wa.me/551938955647?text=${encodeURIComponent(msg)}`;
+  window.open(url, "_blank");
+}

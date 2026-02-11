@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Sprint MTB</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
@@ -228,12 +230,15 @@ setInterval(() => {
 
 <!--  Regulameto  -->
 
-<section class="inscricao-section">
+<section class="inscricao-section" id="regulamento">
+  <div class="section-divider">
+    <h3>REGULAMENTO</h3>
+  </div>
   <div class="container-inscricao">
 
     <!-- lado esquerdo -->
     <div class="regulamento-info">
-  <h2>Regulamento</h2>
+  <h2>Informações Gerais</h2>
   <p>Inscrições, categorias, segurança e regras gerais.</p>
   <a href="docs/REGULAMENTO GERAL SPRINT MTB OFICIAL 2024.pdf" target="_blank" class="btn">Ver regulamento completo</a>
 </div>
@@ -242,13 +247,13 @@ setInterval(() => {
 <div class="inscricao-container">
   <h2>Garanta sua vaga</h2>
 
- <form class="form">
-      <input type="text" placeholder="Nome" required>
-      <input type="email" placeholder="E-mail" required>
-      <button class="btn">Quero competir</button>
+ <form class="form" onsubmit="enviarWhats(event)">
+      <input type="text" id="nome" placeholder="Nome" required>
+      <input type="email" id="email" placeholder="E-mail" required>
+      <button type="submit" class="btn">Quero competir</button>
     </form>
 
-    <div class="whatsapp-box">
+    <!-- <div class="whatsapp-box"> 
       <img src="img/whatsappverde.png" alt="WhatsApp">
       <a href="https://wa.me/5511999999999" 
         target="_blank" 
@@ -256,8 +261,9 @@ setInterval(() => {
         Fale conosco no WhatsApp
       </a>
     </div>
+  -->
 </div>
-  </div>
+  
 </section>
 
 <!-- patrocinadores -->
@@ -327,6 +333,13 @@ setInterval(() => {
   <p class="copy">© Sprint MTB - Todos os direitos reservados</p>
   <p>Desenvolvido por: Everton Casagrande</p>
 </footer>
+
+<!-- zap fixo -->
+<a href="https://wa.me/5599999999999?text=Olá!%20Quero%20me%20inscrever%20no%20Sprint%20MTB%202026!"
+   class="whatsapp-fixo"
+   target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 
 </body>

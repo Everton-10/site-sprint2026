@@ -550,11 +550,11 @@ border: 2px solid #00ff88;   /* verde do site */
 
 .btn-inscricao {
   display: block;
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
   background: linear-gradient(135deg, #5fed00, #00c6ff);
   color: #fff;
-  padding: 12px;
+  padding: 18px;
   border-radius: 30px;
   font-weight: bold;
   transition: 0.3s;
@@ -574,6 +574,8 @@ border: 2px solid #00ff88;   /* verde do site */
 
 .regulamento-info {
   flex: 1;
+  max-width: 400px;
+  margin-top: 40px;
   
 }
 
@@ -808,13 +810,13 @@ border: 2px solid #00ff88;   /* verde do site */
 }
 
 
-/* teste alinhamento quando precisar 
+/* teste alinhamento quando precisar  */
 section { outline: 2px solid red; }
 footer { outline: 2px solid blue; }
 * {
   outline: 1px solid red;
 } 
-*/
+
 
 /* teste carrosel 
 .sponsor {
@@ -824,3 +826,28 @@ footer { outline: 2px solid blue; }
   outline: 2px solid blue;
 }
 */
+
+
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 42px;
+  z-index: 9999;
+  box-shadow: 0 0 20px #25D366;
+  transition: .3s;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+}
+
+
