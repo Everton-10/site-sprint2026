@@ -17,32 +17,18 @@
 
 <script src="js/script.js" defer></script>
 
-
-
-<!-- script contagem do evento sprint mtb -->
- <script>
-const eventDate = new Date("2026-10-18T08:00:00").getTime();
-
-setInterval(() => {
-  const now = new Date().getTime();
-  const distance = eventDate - now;
-
-  if (distance < 0) return;
-
-  document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-  document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
-}, 1000);
-</script>
-
 <body>
-<main>
+<main id="home">
 <header>
   <div class="nav">
     <a href="#" class="logo">
       <img src="img/logo sprint.png" alt="Sprint MTB">
     </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
     <div class="countdown">
   <div><span id="days">00</span><small>Dias</small></div>
@@ -326,6 +312,7 @@ setInterval(() => {
     </a>
     <a href="https://www.tiktok.com/@sprintmtb" target="_blank">
       <img src="img/tik-tok.png">
+    </a>
   </div>
 </div>
   </div>

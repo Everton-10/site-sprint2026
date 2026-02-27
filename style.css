@@ -77,6 +77,25 @@ body {
   text-decoration: none;
 }
 
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #5fed00;
+  border-radius: 10px;
+  background: #0a0a0a;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  background: #5fed00;
+  transition: 0.25s ease;
+}
+
 
 
 /* BOTÃO */
@@ -810,24 +829,6 @@ border: 2px solid #00ff88;   /* verde do site */
 }
 
 
-/* teste alinhamento quando precisar  */
-section { outline: 2px solid red; }
-footer { outline: 2px solid blue; }
-* {
-  outline: 1px solid red;
-} 
-
-
-/* teste carrosel 
-.sponsor {
-  outline: 2px solid red;
-}
-.carousel-track {
-  outline: 2px solid blue;
-}
-*/
-
-
 .whatsapp-fixo {
   position: fixed;
   bottom: 25px;
@@ -850,4 +851,163 @@ footer { outline: 2px solid blue; }
   transform: scale(1.1);
 }
 
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+/* Tablets e telas médias */
+@media (max-width: 992px) {
+  .nav {
+    padding: 0 20px;
+  }
+
+  .banner {
+    padding-left: 40px;
+  }
+
+  .loja {
+    gap: 30px;
+    padding: 60px 20px;
+  }
+
+  .container-inscricao,
+  .regulamento-box {
+    gap: 24px;
+  }
+
+  .regulamento-box {
+    flex-wrap: wrap;
+  }
+
+  .reg-card {
+    width: calc(50% - 12px);
+  }
+
+  .reg-card:last-child {
+    width: 100%;
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  header {
+    position: static;
+    height: auto;
+  }
+
+  body {
+    padding-top: 0;
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px 16px;
+  }
+
+  .logo img {
+    height: 48px;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .countdown {
+    grid-column: 1 / -1;
+    margin: 10px 0 0;
+  }
+
+  .countdown span {
+    font-size: 18px;
+  }
+
+  .nav ul {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    margin-top: 8px;
+    padding: 14px 12px;
+    border: 1px solid #1f6fff55;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  .nav ul.menu-open {
+    display: flex;
+  }
+
+  .banner {
+    height: 55vh;
+    padding: 40px 16px;
+    background-position: top center;
+    background-size: cover;
+  }
+
+  .banner-content {
+    max-width: 100%;
+  }
+
+  .banner-content h1 {
+    font-size: 38px;
+  }
+
+  .banner-content p {
+    font-size: 16px;
+  }
+
+  .btn-hero {
+    margin-top: 60px;
+    padding: 12px 22px;
+  }
+
+  section {
+    padding: 40px 16px;
+  }
+
+  .info-rapida {
+    justify-content: center;
+  }
+
+  .regulamento-box,
+  .container-inscricao,
+  .loja {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reg-card,
+  .inscricao-container,
+  .regulamento-info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .kids-section {
+    padding: 60px 16px;
+  }
+
+  .kids-track img {
+    height: 140px;
+  }
+}
 

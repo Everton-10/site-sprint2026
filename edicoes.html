@@ -8,14 +8,21 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="footer.css">
 <link rel="stylesheet" href="edicoes.css">
+<script src="js/script.js" defer></script>
 
 </head>
-<main>
 <body>
+<main>
+<header>
     <div class="nav">
     <a href="#" class="logo">
       <img src="img/logo sprint.png" alt="Sprint MTB">
     </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
     <div class="countdown">
   <div><span id="days">00</span><small>Dias</small></div>
@@ -24,10 +31,10 @@
   <div><span id="seconds">00</span><small>Seg</small></div>
 </div>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#evento">Evento</a></li>
-      <li><a href="#edicoes">Edições</a></li>
-      <li><a href="#regulamento">Regulamento</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#evento">Evento</a></li>
+      <li><a href="index.html#edicoes">Edições</a></li>
+      <li><a href="index.html#regulamento">Regulamento</a></li>
       <li><a href="index.html" class="btn">Voltar para Home</a></li>
     </ul>
   </div>
@@ -170,6 +177,7 @@ function showEdition(year) {
     </a>
     <a href="https://www.tiktok.com/@sprintmtb" target="_blank">
       <img src="img/tik-tok.png">
+    </a>
   </div>
 </div>
   </div>

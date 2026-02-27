@@ -5,31 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Oficial Sprint MTB</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="loja.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js" defer></script>
 </head>
-
-<link rel="stylesheet" href="loja.css">
-<link rel="stylesheet" href="footer.css">
-<link rel="stylesheet" href="style.css">
-
-
+<body>
 <header>
   <div class="nav">
     <a href="#" class="logo">
       <img src="img/logo sprint.png" alt="Sprint MTB">
     </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="countdown">
+  <div><span id="days">00</span><small>Dias</small></div>
+  <div><span id="hours">00</span><small>Horas</small></div>
+  <div><span id="minutes">00</span><small>Min</small></div>
+  <div><span id="seconds">00</span><small>Seg</small></div>
+</div>
 
     
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#evento">Evento</a></li>
-      <li><a href="#edicoes">Edições</a></li>
-      <li><a href="#regulamento">Regulamento</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#evento">Evento</a></li>
+      <li><a href="index.html#edicoes">Edições</a></li>
+      <li><a href="index.html#regulamento">Regulamento</a></li>
     <li><a href="index.html" class="btn">Voltar</a></li>
 
     </ul>
   </div>
 </header>
-<body>
 
    <section id="loja" class="loja">
   <div class="container">
@@ -120,6 +130,7 @@
     </a>
     <a href="https://www.tiktok.com/@sprintmtb" target="_blank">
       <img src="img/tik-tok.png">
+    </a>
   </div>
 </div>
   </div>
